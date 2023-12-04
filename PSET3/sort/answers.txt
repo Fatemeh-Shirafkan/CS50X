@@ -1,0 +1,19 @@
+sort1 uses: Bubble Sort
+
+How do you know?: All three reverse number files were tested with all sort files
+and sort 1 returned a longer time than the rest of the files,
+and considering that bubble sort has a longer performance in sorting numbers in reverse than others,
+so sort 1 is bubble sort.
+
+sort2 uses: Merge sort
+
+How do you know?:All three sort files were tested on reverse number files,
+ and as a result, sort 2 had the least time in sorting files,
+ which works better in the Merge sort method for reverse numerical files,
+ so the sort 2 file is equal to Merge sort.
+
+sort3 uses: selection sort
+
+How do you know?: According to the above results, only the sort3 file remains,
+so the selection sort,
+and also that the time obtained from testing this file on numerical files was the opposite of the normal and average time compared to the previous two methods.

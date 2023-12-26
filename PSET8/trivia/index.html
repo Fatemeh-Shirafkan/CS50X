@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            document.addEventListener("DOMContentLoaded", function (){
+                let result = document.querySelector(".alert-notice");
+                let allBTN = document.querySelectorAll("#btn")
+                console.log(allBTN)
+                allBTN.forEach(function (btn) {
+                    btn.addEventListener("click", function(event){
+                        if(event.target.classList.contains('answer')){
+                            result.innerHTML = "True"
+                        }else{
+                            result.innerHTML = "False"
+                            }
+                        })
+                })
+
+                let checkBTN = document.querySelector("#check")
+                let inputFilde = document.querySelector("input")
+                let notise = document.querySelector(".notise")
+                checkBTN.addEventListener("click", function (){
+                    if(inputFilde.value.toLowerCase() != "ottawa"){
+                        notise.innerHTML = "False"
+                    }else{
+                        notise.innerHTML = "True"
+
+                    }
+                })
+
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h2>Which city is the capital of Canada? </h2>
+                <br>
+                <h2 class="alert-notice"></h2>
+                <button id="btn" class="answer">Ottawa</button>
+                <button id="btn">Vancouver</button>
+                <button id="btn">Toronto</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+
+                <h3>Do you know which city is the capital of Canada?</h3>
+                <h2 class="notise"></h2>
+                <input type="text">
+                <button id="check">check</button>
+
+            </div>
+        </div>
+    </body>
+</html>
